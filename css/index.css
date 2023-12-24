@@ -53,7 +53,7 @@ h1,
 }
 
 .left-content{
-    background-image: url(./images/image-product-desktop.jpg);
+    background-image: url(../images/image-product-desktop.jpg);
     background-size: 100%;
 }
 
@@ -144,7 +144,7 @@ button:hover{
     }
 
     .left-content {
-        background-image: url(./images/image-product-mobile.jpg);
+        background-image: url(../images/image-product-mobile.jpg);
     }
 
     .right-content {
