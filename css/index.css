@@ -1,0 +1,157 @@
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--cream);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+.main-price {
+    font-family: 'Fraunces', serif;
+}
+
+.main-container {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    width: 600px;
+    height: 450px;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.left-content{
+    background-image: url(/images/image-product-desktop.jpg);
+    background-size: 100%;
+}
+
+.right-content {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-type {
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h1 {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    line-height: 34px;
+    font-size: 34px;
+}
+
+.product-description {
+    color: var(--dark-grayish-blue);
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;   
+}
+
+.main-price{
+    color: var(--dark-cyan);
+    font-size: 32px;
+}
+
+.sub-price{
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    transition: all ease .3s;
+}
+
+button:hover{
+    background-color: var(--very-dark-blue);
+}
+
+
+.attribution {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    
+}
+
+@media (max-width:375px) {
+
+    .main-container{
+        width: 90%;
+        height: 600px;
+        grid-auto-flow: row;
+        grid-template-rows: .6fr 1fr;
+    }
+
+    .left-content {
+        background-image: url(/images/image-product-mobile.jpg);
+    }
+
+    .right-content {
+        padding: 1.5rem;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+}
